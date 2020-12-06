@@ -1,3 +1,11 @@
 <% @posts.each do |post| %>
   <%= render :partial => "post", locals: {:post => post} %>
 <% end %>
+<h1> Collection Partials </h1>
+<%= render :partial => "post", collection: @posts %>
+<h1> MORE ABSTRACT </h1>
+<%= render @posts %>
+
+<h1> If @posts is empty </h1>
+
+<%= render @posts || "There are no blog posts!"%>
